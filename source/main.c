@@ -23,22 +23,6 @@ u16 const h_mod_6[32] = {
 	0, 1, 2, 3, 4, 5, 0, 1
 };
 
-void plotPixel( u32 x, u32 y, u16 colour)
-{
-	framebuffer[y * SCREEN_WIDTH + x] = colour;
-}
-
-// Plot some number of colors to x y using memcpy
-void plotColors( u32 x, u32 y, u16 *colors, u32 numColors)
-{
-	memcpy( framebuffer + y*SCREEN_WIDTH + x, colors, numColors * sizeof(u16));
-}
-
-u16 getPixel( u32 x, u32 y)
-{
-	return framebuffer[y * SCREEN_WIDTH + x];
-}
-
 // Convert 5-bit H, S, V to 5-bit R, G, B
 u16* hsv2rbg(int h, int s, int v, u16 *rgb) {
 	int r, g, b, f, p, q, t, h_region;
