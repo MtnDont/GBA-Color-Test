@@ -1,0 +1,7 @@
+*.png
+*.elf
+*.gba
+*.sav
+ctest/
+build/
+.vscode/
